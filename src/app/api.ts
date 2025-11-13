@@ -7,11 +7,11 @@ import {Observable} from 'rxjs';
 })
 export class Api {
   
-  private apiURL: string = "/api/leitura";
+  private apiURL: string = "https://esp32-mongodb-idev3.onrender.com";
 
   constructor(private http:HttpClient) {}
 
   getSensores():Observable<any[]> {
-    return this.http.get<any[]>(this.apiURL);
+    return this.http.get<any[]>(this.apiURL + "/api/leituras/Asquin");
   }
 }
